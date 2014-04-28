@@ -1,0 +1,19 @@
+<div>
+  <pre>Sorting predicate = {{predicate}}; reverse = {{reverse}}</pre>
+  <hr/>
+  [ <a href="" ng-click="predicate=''">unsorted</a> ]
+  <table class="Subject wise Attendance">
+	
+	
+	<tr>
+      <th><a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a></th>
+      <th><a href="" ng-click="predicate = 'code'; reverse=!reverse">Code</a></th>
+	  <th><a href="" ng-click="predicate = 'att'; reverse=!reverse">Attendance</a></th>
+    </tr>
+    <tr ng-repeat="s in subject | orderBy:predicate:reverse">
+      <td>{{s.name}}</td>
+      <td>{{s.code}}</td>
+	  <td>{{s.att}} </td>
+    </tr>
+  </table>						
+</div>
